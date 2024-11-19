@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIRA (Versuni) Video</title>
+    <title>VIRA</title>
     <style>
         body {
             display: flex;
@@ -44,10 +44,16 @@
             font-family: Arial, sans-serif;
             font-size: 14px;
             padding: 10px;
-            width: 100px; /* Set a fixed width */
+            width: 100px; /* Set a default fixed width */
             height: 40px; /* Set a fixed height */
             text-align: center; /* Center-align text/icons */
             cursor: pointer;
+        }
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            .controls button {
+                width: 120px; /* Increase button width for mobile devices */
+            }
         }
     </style>
     <script>
