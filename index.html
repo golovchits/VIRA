@@ -62,10 +62,10 @@
         function toggleMute(video, button) {
             if (video.muted) {
                 video.muted = false;
-                button.innerHTML = "🔊 Unmute"; // Change to Unmute icon/text
+                button.innerHTML = "🔇 Mute"; // Change to Mute icon/text
             } else {
                 video.muted = true;
-                button.innerHTML = "🔇 Mute"; // Change to Mute icon/text
+                button.innerHTML = "🔊 Unmute"; // Change to Unmute icon/text
             }
         }
     </script>
@@ -77,8 +77,8 @@
         Your browser does not support the video tag.
     </video>
     <div class="controls">
-        <button id="playPauseBtn" onclick="togglePlay(document.getElementById('videoPlayer'), this)">▶ Play</button>
-        <button id="muteUnmuteBtn" onclick="toggleMute(document.getElementById('videoPlayer'), this)">🔇 Mute</button>
+        <button id="playPauseBtn" onclick="togglePlay(document.getElementById('videoPlayer'), this)">⏸ Pause</button>
+        <button id="muteUnmuteBtn" onclick="toggleMute(document.getElementById('videoPlayer'), this)">🔊 Unmute</button>
     </div>
     <p>Note: The sound is off by default, but you can unmute it using the button above.</p>
 </body>
