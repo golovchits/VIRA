@@ -14,11 +14,28 @@
             margin: 0;
             background-color: #f0f0f0; /* Optional: Adds a light background color */
         }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 640px;
+        }
         video {
             width: 100%;
             height: auto;
-            max-width: 640px; /* Limits the video width on larger screens */
+            display: block;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Adds a shadow */
+        }
+        .watermark {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            text-decoration: none;
         }
         h1 {
             font-family: Arial, sans-serif;
@@ -87,15 +104,18 @@
 </head>
 <body>
     <h1>VIRA (Versuni)</h1>
-    <video 
-        id="videoPlayer" 
-        autoplay 
-        loop 
-        muted 
-        playsinline>
-        <source src="https://github.com/golovchits/VIRA/raw/refs/heads/main/promoVIRAfinalfakedata.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div class="video-container">
+        <video 
+            id="videoPlayer" 
+            autoplay 
+            loop 
+            muted 
+            playsinline>
+            <source src="https://github.com/golovchits/VIRA/raw/refs/heads/main/promoVIRAfinalfakedata.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <a href="https://golovchits.github.io" class="watermark" target="_blank">golovchits.github.io</a>
+    </div>
     <div class="controls">
         <button id="playPauseBtn" onclick="togglePlay(document.getElementById('videoPlayer'), this)">⏸ Pause</button>
         <button id="muteUnmuteBtn" onclick="toggleMute(document.getElementById('videoPlayer'), this)">🔊 Unmute</button>
