@@ -7,6 +7,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -18,10 +19,16 @@
             max-height: 100%;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Adds a shadow */
         }
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-    <video width="640" height="360" controls loop autoplay>
+    <h1>VIRA (Versuni)</h1>
+    <video width="640" height="360" controls loop autoplay muted>
         <source src="https://github.com/golovchits/VIRA/raw/refs/heads/main/promoVIRAfinalfakedata.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
