@@ -30,20 +30,47 @@
             margin-top: 10px;
             color: #555; /* Optional: Adds a subtle color for the text */
         }
+        .controls {
+            margin-top: 10px;
+        }
+        .controls button {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
     </style>
     <script>
         // Disable right-click context menu
         document.addEventListener("contextmenu", (e) => {
             e.preventDefault();
         });
+
+        // Custom controls functionality
+        function togglePlay(video) {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+        function toggleMute(video) {
+            video.muted = !video.muted;
+        }
     </script>
 </head>
 <body>
     <h1>VIRA (Versuni)</h1>
-    <video width="640" height="360" autoplay loop muted>
+    <video id="videoPlayer" width="640" height="360" autoplay loop muted>
         <source src="https://github.com/golovchits/VIRA/raw/refs/heads/main/promoVIRAfinalfakedata.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <p>Note: You can turn on the sound through the video controls.</p>
+    <div class="controls">
+        <button onclick="togglePlay(document.getElementById('videoPlayer'))">Play/Pause</button>
+        <button onclick="toggleMute(document.getElementById('videoPlayer'))">Mute/Unmute</button>
+    </div>
+    <p>Note: The sound is off by default, but you can unmute it using the button above.</p>
 </body>
 </html>
