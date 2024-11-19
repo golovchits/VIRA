@@ -12,7 +12,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0; /* Optional: Adds a light background color */
+            background-color: #f0f0f0; 
         }
         .video-container {
             position: relative;
@@ -23,13 +23,13 @@
             width: 100%;
             height: auto;
             display: block;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Adds a shadow */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
         }
         .watermark {
             position: absolute;
             bottom: 10px;
             right: 10px;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            background: rgba(0, 0, 0, 0.5); 
             color: white;
             font-size: 12px;
             padding: 5px 10px;
@@ -47,7 +47,7 @@
             font-family: Arial, sans-serif;
             font-size: 14px;
             margin-top: 10px;
-            color: #555; /* Optional: Adds a subtle color for the text */
+            color: #555; 
             text-align: center;
         }
         .controls {
@@ -55,21 +55,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px; /* Adds consistent spacing between buttons */
+            gap: 10px; 
         }
         .controls button {
             font-family: Arial, sans-serif;
             font-size: 14px;
             padding: 10px;
-            width: 100px; /* Set a default fixed width */
-            height: 40px; /* Set a fixed height */
-            text-align: center; /* Center-align text/icons */
+            width: 100px; 
+            height: 40px; 
+            text-align: center; 
             cursor: pointer;
         }
         /* Media query for smaller screens */
         @media (max-width: 600px) {
             .controls button {
-                width: 120px; /* Increase button width for mobile devices */
+                width: 120px; 
             }
         }
     </style>
@@ -83,10 +83,10 @@
         function togglePlay(video, button) {
             if (video.paused) {
                 video.play();
-                button.innerHTML = "⏸ Pause"; // Change to Pause icon/text
+                button.innerHTML = "⏸ Pause"; 
             } else {
                 video.pause();
-                button.innerHTML = "▶ Play"; // Change to Play icon/text
+                button.innerHTML = "▶ Play"; 
             }
         }
 
@@ -94,10 +94,10 @@
         function toggleMute(video, button) {
             if (video.muted) {
                 video.muted = false;
-                button.innerHTML = "🔇 Mute"; // Change to Mute icon/text
+                button.innerHTML = "🔇 Mute"; 
             } else {
                 video.muted = true;
-                button.innerHTML = "🔊 Unmute"; // Change to Unmute icon/text
+                button.innerHTML = "🔊 Unmute";
             }
         }
     </script>
