@@ -15,20 +15,23 @@
             background-color: #f0f0f0; /* Optional: Adds a light background color */
         }
         video {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            height: auto;
+            max-width: 640px; /* Limits the video width on larger screens */
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Adds a shadow */
         }
         h1 {
             font-family: Arial, sans-serif;
             font-size: 24px;
             margin-bottom: 20px;
+            text-align: center;
         }
         p {
             font-family: Arial, sans-serif;
             font-size: 14px;
             margin-top: 10px;
             color: #555; /* Optional: Adds a subtle color for the text */
+            text-align: center;
         }
         .controls {
             margin-top: 10px;
@@ -80,8 +83,6 @@
     <h1>VIRA (Versuni)</h1>
     <video 
         id="videoPlayer" 
-        width="640" 
-        height="360" 
         autoplay 
         loop 
         muted 
